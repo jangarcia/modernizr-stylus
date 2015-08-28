@@ -35,8 +35,9 @@ _modernizr(features, declaration, support)
         selector += '.no-' + feature + ' ' + target + trailing
 
   // declare this ruleset at the root reference (/ is the same as Sass' @at-root)
-  /{selector}
-    {declaration}
+  +prefix-classes('')
+    /{selector}
+      {declaration}
 
 // Block Mixin +yep()
 // @api public
